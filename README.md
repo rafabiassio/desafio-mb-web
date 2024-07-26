@@ -1,29 +1,21 @@
-# desafio-mb-web
+## 💻 Esse projeto foi criado para o [Desafio MB Web](https://github.com/mercadobitcoin/desafio-mb-web.git), para testar precisa de poucos passos:
 
-This template should help get you started developing with Vue 3 in Vite.
+1. **Clonar o [repositório](https://github.com/rafabiassio/desafio-mb-web)**
 
-## Recommended IDE Setup
+   ```shell
+   git clone https://github.com/rafabiassio/desafio-mb-web
+   ```
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+2. **Instalar as dependências**
 
-## Customize configuration
+   ```shell
+   npm install
+   ```
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+3. **E por fim, só executar! **
 
-## Project Setup
+   ```shell
+   npm run dev
+   ```
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+   ### O  projeto está no link [/registration](http://localhost:9000/registration), usando a porta 9000 como padrão
