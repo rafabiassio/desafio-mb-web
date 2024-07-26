@@ -1,18 +1,22 @@
-const { validateAllData } = require('./utils/validators');
-const express = require('express');
-const path = require('path');
-const fs = require('fs').promises;
+import { validateAllData } from './public/utils/validators.js'
+import express from 'express'
+import path from 'path'
+import { fileURLToPath } from 'url';
 const app = express();
 const port = 9000;
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'))
 
 app.get('/registration', async function (_, res) {
 
   try {
-    const basePath = require('path').resolve(__dirname)
+    const basePath = path.resolve(__dirname)
     res.sendFile(path.join(basePath, '/views/registration/index.html'));
+
   } catch (error) {
     res.writeHead(500, { 'Content-Type': 'text/plain' });
     res.end('Erro interno do servidor');
@@ -21,13 +25,8 @@ app.get('/registration', async function (_, res) {
 
 app.post('/registration', register);
 
-app.listen(port, () => {
-  console.info('Server iniciado em http://localhost:' + port)
-});
-
 async function register(req, res) {
   try {
-    console.log(req.body)
     const data = req.body
     const errors = validateAllData(data)
 
@@ -40,3 +39,7 @@ async function register(req, res) {
     res.status(500).json(err);
   }
 }
+
+app.listen(port, () => {
+  console.info('Server iniciado em http://localhost:' + port)
+});

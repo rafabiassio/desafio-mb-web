@@ -1,8 +1,9 @@
 {
   "name": "desafio-mb-web",
   "version": "0.0.0",
-  "private": true,
-  "type": "commonjs",
+  "private": false,
+  "type": "module",
+  "main": "index.js",
   "scripts": {
     "dev": "node index.js",
     "build": "vite build"

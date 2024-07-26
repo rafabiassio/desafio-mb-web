@@ -1,7 +1,6 @@
-import { createApp, ref, reactive, computed } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js' //TODO: prod cdn
+import { createApp, ref, reactive, computed } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
-import { handleErrorsAlert, handleRegister, validateFirstStep, validateSecondStep, validateThirdStep, validateAllData, validateEqualPasswords } from '../../utils/validators'
-
+import { handleErrorsAlert, handleRegister, validateFirstStep, validateSecondStep, validateThirdStep, validateAllData, validateEqualPasswords } from 'validators'
 
 createApp({
   setup() {
